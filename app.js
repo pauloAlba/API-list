@@ -7,8 +7,9 @@ import cors from "cors";
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: ['http://127.0.0.1:5500', 'http://127.0.0.1']
+  origin: '*'
 }));
+
 app.use(router);
 
 const port = "127.0.0.1:443"
