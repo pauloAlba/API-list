@@ -11,7 +11,7 @@ app.use(cors({
 }));
 app.use(router);
 
-const port = "4433"
+const port = "443"
 const server = https.createServer(app)
 
 https.createServer({
