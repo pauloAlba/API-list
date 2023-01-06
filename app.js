@@ -12,9 +12,8 @@ app.use(router);
 const port = process.env.PORT || 3000;
 const server = https.createServer(app)
 
-server.listen(port, () => {
-  console.log(`startede on port ${port} `)
-});
 
-
-
+https.createServer({
+      cert: fs.readFileSync("src/SSL/code.crt"),
+      key: fs.readFileSync("src/SSL/code.key")
+    }, app).listen(port, () => console.log("Rodando em https"))
