@@ -12,7 +12,7 @@ app.use(router);
 const port = process.env.PORT || 3000;
 const server = https.createServer(app)
 
-server.listen(port, hostname(), () => {
+server.listen(port, () => {
   console.log(`startede on port ${port} `)
 });
 
