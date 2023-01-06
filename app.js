@@ -10,8 +10,11 @@ app.use(cors());
 app.use(router);
 
 const port = process.env.PORT || 3000;
+const server = https.createServer(app)
 
-app.listen(port, () => console.log("Servidor Rodando"));
+server.listen(port, hostname, () => {
+  console.log(`startede on port ${port} `)
+});
 
 
 
