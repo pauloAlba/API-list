@@ -14,7 +14,7 @@ app.use(router);
 
 const port = "443"
 
-app.listen(3000, ()=> console.log("Api Rodando."))
+app.listen(port, ()=> console.log("Api Rodando."))
 
 /*
 https.createServer({
