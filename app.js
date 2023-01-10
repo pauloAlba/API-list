@@ -15,7 +15,4 @@ app.use(router);
 const port = "127.0.0.1:443"
 const server = https.createServer(app)
 
-https.createServer({
-  cert: fs.readFileSync("SSL/code.crt"),
-  key: fs.readFileSync("SSL/code.key")
-}, app).listen(port, () => console.log("Rodando em https"))
+app.listen(port, () => console.log("Rodando em https"))
