@@ -10,11 +10,12 @@ app.use(cors());
 
 app.use(router);
 
-const port = "3000"
 
 
+app.set('port', process.env.PORT || 3000);
+app.listen(3000, ()=> console.log("Api Rodando."))
 
-app.listen(port, ()=> console.log("Api Rodando."))
+
 
 /*
 https.createServer({
