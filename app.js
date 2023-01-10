@@ -10,9 +10,14 @@ app.use(cors());
 
 app.use(router);
 
-const port = "127.0.0.1:443"
+//const port = "127.0.0.1:443"
 
+const port = "443"
 
-app.get("/", (req, res) => {
-  res.send("olá, mundo!")
-}).listen(port, () => console.log("Rodando em https"))
+app.listen(3000, ()=> console.log("Api Rodando."))
+
+https.createServer({
+  cert: fs.readFileSync("src/SSL/code.crt"),
+  key: fs.readFileSync("src/SSL/code.key")
+}, app).listen(port, () => console.log("Rodando em https"))
+
