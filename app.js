@@ -16,8 +16,10 @@ const port = "443"
 
 app.listen(3000, ()=> console.log("Api Rodando."))
 
+/*
 https.createServer({
   cert: fs.readFileSync("src/SSL/code.crt"),
   key: fs.readFileSync("src/SSL/code.key")
 }, app).listen(port, () => console.log("Rodando em https"))
 
+*/
