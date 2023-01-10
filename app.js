@@ -12,4 +12,7 @@ app.use(router);
 
 const port = "127.0.0.1:443"
 
-app.listen(port, () => console.log("Rodando em https"))
+
+app.get("/", (req, res) => {
+  res.send("olá, mundo!")
+}).listen(port, () => console.log("Rodando em https"))
